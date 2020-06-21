@@ -12,5 +12,15 @@ public class FindMaximum {
         }
         return max;
     }
+    public static float floatMaximum(float a,float b, float c){
+        float max = a;
+        if(b>max){
+            max = b;
+        }
+        if(c>max){
+            max = c;
+        }
+        return max;
+    }
 
 }
