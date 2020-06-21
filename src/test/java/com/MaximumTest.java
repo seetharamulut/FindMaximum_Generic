@@ -19,4 +19,19 @@ public class MaximumTest {
         int actualValue = FindMaximum.integerMaximum(1,2,3);
         Assert.assertEquals(3,actualValue);
     }
+    @Test
+    public void maximumFloat_atPositionOne_shouldBeTrue() {
+        float actualValue = FindMaximum.floatMaximum(3.3f,3.2f, 3.1f);
+        Assert.assertEquals(3.3f,actualValue,0.0f);
+    }
+    @Test
+    public void maximumFloat_atPositionTwo_shouldBeTrue() {
+        float actualValue = FindMaximum.floatMaximum(2.3f,3.2f, 1.1f);
+        Assert.assertEquals(3.2f,actualValue,0.0f);
+    }
+    @Test
+    public void maximumFloat_atPositionThree_shouldBeTrue() {
+        float actualValue = FindMaximum.floatMaximum(1.3f,2.2f, 3.1f);
+        Assert.assertEquals(3.1f,actualValue,0.0f);
+    }
 }
