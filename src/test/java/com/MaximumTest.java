@@ -6,18 +6,16 @@ import org.junit.Test;
 public class MaximumTest {
     @Test
     public void maximumInteger() {
-    int actualValue = FindMaximum.maximum(1,2,3);
-        Assert.assertEquals(3,actualValue);
+            Assert.assertEquals(3,new FindMaximum(1,2,3).maximum());
     }
     @Test
     public void maximumDouble() {
-        float actualValue = FindMaximum.maximum(1.2f,2.2f,1.3f);
-        Assert.assertEquals(2.2f,actualValue,0.0f);
+        float actualValue = (float) new FindMaximum(1.2f,3.2f,4.5f).maximum();
+        Assert.assertEquals(4.5f,actualValue,0.0f);
     }
     @Test
     public void maximumString() {
-        String  actualValue = FindMaximum.maximum("apple","peach","banana");
-        Assert.assertEquals("peach", actualValue);
+        Assert.assertEquals("peach",new FindMaximum("apple","peach","banana").maximum());
     }
 
 }
