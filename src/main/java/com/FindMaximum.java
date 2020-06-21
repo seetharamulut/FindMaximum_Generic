@@ -16,4 +16,9 @@ public class FindMaximum <E extends Comparable<E>>{
         Arrays.sort(inputArray);
         return inputArray[inputArray.length -1];
     }
+
+    public void printMax(){
+        System.out.printf("%s", inputArray[inputArray.length-1]);
+        System.out.println();
+    }
 }
