@@ -34,4 +34,19 @@ public class MaximumTest {
         float actualValue = FindMaximum.floatMaximum(1.3f,2.2f, 3.1f);
         Assert.assertEquals(3.1f,actualValue,0.0f);
     }
+    @Test
+    public void maximumString_atPositionOne_shouldBeTrue() {
+        String  actualValue = FindMaximum.stringMaximum("aaaa","aaa","aa");
+        Assert.assertEquals("aaaa", actualValue);
+    }
+    @Test
+    public void maximumString_atPositionTwo_shouldBeTrue() {
+        String  actualValue = FindMaximum.stringMaximum("aaa","aaaa","aa");
+        Assert.assertEquals("aaaa", actualValue);
+    }
+    @Test
+    public void maximumString_atPositionThree_shouldBeTrue() {
+        String  actualValue = FindMaximum.stringMaximum("aa","aaa","aaaa");
+        Assert.assertEquals("aaaa", actualValue);
+    }
 }
