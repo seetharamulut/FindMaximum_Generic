@@ -7,17 +7,22 @@ public class MaximumTest {
     @Test
     public void maximumInteger() {
         Integer[] integerArray = {3,6,9,3};
-            Assert.assertEquals(9,new FindMaximum(integerArray).maximum());
+        FindMaximum findMaximum = new FindMaximum(integerArray);
+            Assert.assertEquals(9,(int)findMaximum.maximum());
+        findMaximum.printMax();
     }
     @Test
     public void maximumDouble() {
        Float[] floatArray = {2.2f,1.3f,2.0f,4.5f};
-        Assert.assertEquals(4.5f,(float) new FindMaximum(floatArray).maximum(),0.0f);
+       FindMaximum findMaximum = new FindMaximum(floatArray);
+        Assert.assertEquals(4.5f,(float) findMaximum.maximum(),0.0f);
+        findMaximum.printMax();
     }
     @Test
     public void maximumString() {
         String[] stringArray = {"apple","peach","banana","grape"};
-        Assert.assertEquals("peach",new FindMaximum(stringArray).maximum());
+        FindMaximum findMaximum = new FindMaximum(stringArray);
+        Assert.assertEquals("peach",(String)findMaximum.maximum());
+        findMaximum.printMax();
     }
-
 }
