@@ -1,28 +1,18 @@
 package com;
-
 import org.junit.Assert;
 import org.junit.Test;
 
 public class MaximumTest {
     @Test
     public void maximumInteger() {
-        Integer[] integerArray = {3,6,9,3};
-        FindMaximum findMaximum = new FindMaximum(integerArray);
-            Assert.assertEquals(9,(int)findMaximum.maximum());
-        findMaximum.printMax();
+        Assert.assertEquals(9, new FindMaximum(3,2,4,9).maximumValue());
     }
     @Test
     public void maximumDouble() {
-       Float[] floatArray = {2.2f,1.3f,2.0f,4.5f};
-       FindMaximum findMaximum = new FindMaximum(floatArray);
-        Assert.assertEquals(4.5f,(float) findMaximum.maximum(),0.0f);
-        findMaximum.printMax();
+        Assert.assertEquals(4.5f,(float) new FindMaximum(2.3f,1.2f,4.5f).maximumValue(),0.0f);
     }
     @Test
     public void maximumString() {
-        String[] stringArray = {"apple","peach","banana","grape"};
-        FindMaximum findMaximum = new FindMaximum(stringArray);
-        Assert.assertEquals("peach",(String)findMaximum.maximum());
-        findMaximum.printMax();
+        Assert.assertEquals("peach", new FindMaximum("apple","peach").maximumValue());
     }
 }
